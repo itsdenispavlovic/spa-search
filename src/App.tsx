@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Grid} from "@mui/material";
+import SearchItems from "./components/SearchItems";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    return (
+      <Grid
+          container
+          spacing={2}
+          display={{ md: 'flex' }}
+          alignItems={{ md: 'center' }}
+          justifyContent={{ md: 'center' }}
+          pt={{ md: 3 }}
+      >
+          <Grid
+            item
+            md={10}
+            sm={12}
+            paddingTop={{ md: 10 }}
+            display={{ md: 'flex' }}
+            alignItems={{ md: 'center' }}
+            justifyContent={{ md: 'center' }}
+          >
+              <SearchItems />
+          </Grid>
+      </Grid>
+)
 }
 
 export default App;
